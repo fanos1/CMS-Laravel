@@ -1,0 +1,17 @@
+
+<div class="container">	
+	<div class="col-12" id="commonlinks">
+	
+		@if(Auth::check())
+			<a href="/users/logout">Logout</a>
+			@role('manager')
+				<a href="/admin" title="login to admin">Admin</a>
+			@endrole
+		@else
+			<a href="/users/register">Register</a>
+			<a href="/users/login">Login</a>
+		@endif
+		<a href="#">contact</a>
+		
+	</div>
+</div>
